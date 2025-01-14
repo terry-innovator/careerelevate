@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('partials/head'); %>
+</head>
+<body>
+  <%- include('partials/navbar'); %>
+
+  <main>
+    <h1>Get Started</h1>
+    <form action="/generate-resume" method="POST">
+      <label for="first-name">First Name:</label>
+      <input type="text" id="first-name" name="first-name" required>
+
+      <label for="last-name">Last Name:</label>
+      <input type="text" id="last-name" name="last-name" required>
+
+      <label for="education">Education:</label>
+      <textarea id="education" name="education" required></textarea>
+
+      <label for="skills">Skills:</label>
+      <textarea id="skills" name="skills" required></textarea>
+
+      <label for="work-experience">Work Experience:</label>
+      <textarea id="work-experience" name="work-experience" required></textarea>
+
+      <label for="other-sections">Other Sections (Optional):</label>
+      <textarea id="other-sections" name="other-sections"></textarea>
+
+      <button type="submit">Generate Resume</button>
+    </form>
+  </main>
+
+  <%- include('partials/footer'); %>
+</body>
+</html>
